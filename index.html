@@ -2,82 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Allwin Edilbert</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AE — Portfolio</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fdfdfd;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
+    :root{
+      --green:#1f7a53;
+      --ink:#173042;
+      --muted:#5a6b77;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
     }
-    .container {
-      max-width: 600px;
-      padding: 20px;
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; margin:0; }
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial;
+      color:var(--ink); background: #f6f8fb;
+      display:flex; flex-direction:column;
     }
-    h1 {
-      font-size: 3em;
-      margin: 0;
-      font-weight: 700;
-      letter-spacing: 1px;
+
+    header{
+      background:var(--green); color:#fff; position:sticky; top:0; z-index:5;
+      box-shadow: var(--shadow);
     }
-    h2 {
-      font-size: 1.3em;
-      color: #666;
-      margin: 10px 0 20px;
-      font-weight: 500;
+    .topbar{ max-width:1100px; margin:0 auto; padding:18px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .brand{ font-weight:800; letter-spacing:.3px; font-size:1.2rem; text-transform:uppercase; }
+    nav a{ color:#e9fff7; text-decoration:none; margin:0 10px; font-weight:600; opacity:.95; }
+    nav a:hover{ text-decoration:underline; }
+
+    main{
+      flex:1; display:flex; align-items:center; justify-content:center; text-align:center; padding:60px 20px;
     }
-    p {
-      font-size: 1em;
-      color: #444;
-      margin-bottom: 30px;
-    }
-    .links a {
-      margin: 0 15px;
-      color: #333;
-      font-size: 1.4em;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    .links a:hover {
-      color: #007acc;
-    }
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2.2em;
-      }
-      h2 {
-        font-size: 1.1em;
-      }
-    }
+    h1{ font-size:3rem; margin:0 0 10px; }
+    .subtitle{ font-size:1.2rem; color:var(--muted); margin-bottom:40px; }
+    .quote{ font-size:1.1rem; font-style:italic; max-width:700px; margin:0 auto; line-height:1.6; color:var(--ink); }
+
+    footer{ text-align:center; color:var(--muted); padding:26px 12px 40px; font-size:.9rem; }
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <h1>ALLWIN EDILBERT</h1>
-    <h2>Assistant Professor | Mentor</h2>
-    <p>Simplifying Complexity. Curious about what’s next..</p>
-    
-    <div class="links">
-      <a href="https://github.com/edilbert-dnd" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github" aria-hidden="true"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/allwinedilbert/" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin" aria-hidden="true"></i>
-      </a>
-      <a href="mailto:allwinedilbert02@gmail.com" aria-label="Email">
-        <i class="fas fa-envelope" aria-hidden="true"></i>
-      </a>
+  <header>
+    <div class="topbar">
+      <div class="brand">AE</div>
+      <nav aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#papers">Papers</a>
+        <a href="#awards">Certificates & Awards</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
+  <main id="home">
+    <div>
+      <h1>ALLWIN EDILBERT</h1>
+      <p class="subtitle">Assistant Professor — Mentor — Simplifying Complexity | curious about what's next</p>
+      <p class="quote">“Give a man a fish and you feed him for a day. Teach a man how to fish and you feed him for a lifetime.”</p>
+    </div>
+  </main>
+
+  <footer>
+    Designed and developed by Edilbert
+  </footer>
 </body>
 </html>
